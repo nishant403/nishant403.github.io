@@ -1,21 +1,5 @@
 import imageDetails from "./items.js";
 
-//If string length is more than outputLength :
-//replace the middle part with '...' such that final string length ~ outputLength
-const truncateString = function (str, outputLength = 33) {
-  if (str.length <= outputLength) {
-    return str;
-  } else {
-    const partLength = (outputLength - 3) / 2;
-
-    return (
-      str.substr(0, partLength) +
-      "..." +
-      str.substr(str.length - partLength, partLength)
-    );
-  }
-};
-
 let currentImageId = 0;
 
 //replace currentImage by newImage
@@ -47,7 +31,7 @@ const createListItem = function (item, index) {
   thumbnail.alt = title;
 
   const para = document.createElement("p");
-  para.innerText = truncateString(title);
+  para.innerText = title;
 
   const listItem = document.createElement("li");
   listItem.append(thumbnail);
