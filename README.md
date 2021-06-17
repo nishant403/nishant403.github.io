@@ -1,2 +1,3 @@
 # nishant403.github.io
- Github repo to publish webpages
+
+Demo Project using HTML,CSS & Javascript
